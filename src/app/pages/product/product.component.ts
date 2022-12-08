@@ -63,4 +63,5 @@ ProductDelete(){
 return this.http.delete("http://api.escuelajs.co/api/v1/products/7").subscribe
 (res=>{console.log(res)})
 }
+
 }
