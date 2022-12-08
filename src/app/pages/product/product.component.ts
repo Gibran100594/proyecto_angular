@@ -15,9 +15,9 @@ export class ProductComponent implements OnInit {
 
     this.getProducts()
     this.getProduct()
-    this.ProductCreate()
+    //this.ProductCreate()
     this.ProductUpdate()
-    this.ProductDelete()
+    //this.ProductDelete()
 
 
   }
@@ -30,11 +30,9 @@ getProducts(){
     }
 
 getProduct(){
-    return this.http.get('http://api.escuelajs.co/api/v1/products/11').subscribe(res=>{
+    return this.http.get('http://api.escuelajs.co/api/v1/products/14').subscribe(res=>{
   console.log(res)})
     }
-
-
 ProductCreate(){
 const product = {
   title:"Titulo",
@@ -50,17 +48,17 @@ console.log(res)})
 ProductUpdate(){
 const product = {
 title: "Titulo",
-price:3500,
+price:3400,
 description:"Motos Gibran Quiñonez actualizado",
 images:["ggggg"],
 categoryId:1
 }
-return this.http.put("http://api.escuelajs.co/api/v1/products/11", product).subscribe(res=>{
+return this.http.put("http://api.escuelajs.co/api/v1/products/14", product).subscribe(res=>{
 console.log(res)})
 }
 
 ProductDelete(){
-return this.http.delete("http://api.escuelajs.co/api/v1/products/7").subscribe
+return this.http.delete("http://api.escuelajs.co/api/v1/products/13").subscribe
 (res=>{console.log(res)})
 }
 
